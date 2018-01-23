@@ -1,6 +1,11 @@
 import numpy as np
 import cv2
 
+f = open('05_drawing.md', 'w')
+f.write("# OpenCV drawing methods\n")
+f.write("![image](output/05a_drawing.jpg)\n")
+
+
 canvas = np.zeros((300, 300, 3), dtype="uint8")    
 green = (0, 255, 0)
 red = (0, 0, 255)
@@ -38,6 +43,10 @@ for r in range(0, 175, 25):
 update()
 cv2.imwrite("output/05b_circles.jpg", canvas)
 
+f.write("## Circle\n")
+f.write("cv2.circle(canvas, (cx, cy), r, white)\n\n")
+f.write("![image](output/05b_circles.jpg)\n")
+
 canvas = np.zeros((300, 300, 3), dtype="uint8")  
 for i in range(0, 25):
     radius = np.random.randint(5, high=100)
@@ -47,4 +56,5 @@ for i in range(0, 25):
 update()
 cv2.imwrite("output/05c_disks.jpg", canvas)
 
-    
+
+f.close()
