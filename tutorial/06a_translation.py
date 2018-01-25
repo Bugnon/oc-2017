@@ -110,6 +110,8 @@ cropped = image[30:120, 240:335]
 ```
 """)
 
+cv2.rect(
+
 cropped = image[30:120, 240:335]
 show("T-Rex Face", cropped)
 cv2.waitKey(0)
