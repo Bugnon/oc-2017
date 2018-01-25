@@ -1,6 +1,10 @@
 import numpy as np
 import cv2
 
+def md(txt):
+    global f
+    f.write(txt+"\n")
+
 def translate(image, x, y):
     M = np.float32([[1, 0, x], [0, 1, y]])
     shifted = cv2.warpAffine(image, M, (image.shape[1], image.shape[0]))
@@ -33,3 +37,17 @@ def resize(image, width = None, height = None, inter = cv2.INTER_AREA):
         
     resized = cv2.resize(image, dim, interpolation = inter)
     return resized
+
+if __name__ == "__main__":
+## execute only if run as a script
+    path = 'test.md'
+    f = open(path, 'w')
+    md('# Title')
+    md('__bold__ and _italics_')
+    md('- item')
+    md('- item')
+    md('- item')
+    md('')
+    md('Normal text. A `function(arg)` element.')
+    f.close()
+    

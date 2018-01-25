@@ -9,13 +9,14 @@ image = cv2.imread(path)
 cv2.imshow("Original", image)
 
 ## Read the pixel in the top left corner
-(b, g, r) = image[0, 0]
-print("Pixel at (0, 0) - Red={}, Green={}, Blue={}".format(r, g, b))
+(b, g, r) = image[200, 200]
+print("Pixel at (200, 200) - Red={}, Green={}, Blue={}".format(r, g, b))
 
 ## Change the pixel in the top left corner
-image[0, 0] = (0, 0, 255)
-(b, g, r) = image[0, 0]
-print("Pixel at (0, 0) - Red={}, Green={}, Blue={}".format(r, g, b))
+image[200, 200] = (0, 0, 255)
+(b, g, r) = image[200, 200]
+print("Pixel at (200, 200) - Red={}, Green={}, Blue={}".format(r, g, b))
+cv2.imshow("Original", image)
 
 ## Extract a sub-image and display it
 corner = image[0:100, 0:100]
