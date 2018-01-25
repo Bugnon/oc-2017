@@ -14,15 +14,15 @@ shifted = cv2.warpAffine(image, M, (image.shape[1], image.shape[0]))
 
 Shifted Down and Right
 
-![image](output/Shifted Down and Right.jpg)
+![image](output/Shifted%20Down%20and%20Right.jpg)
 
 Shifted Up and Left
 
-![image](output/Shifted Up and Left.jpg)
+![image](output/Shifted%20Up%20and%20Left.jpg)
 
 Shifted Down
 
-![image](output/Shifted Down.jpg)
+![image](output/Shifted%20Down.jpg)
 
 
 ## Rotation
@@ -34,28 +34,28 @@ rotated = cv2.warpAffine(image, M, (w, h))
 
 Rotated by 45 Degrees
 
-![image](output/Rotated by 45 Degrees.jpg)
+![image](output/Rotated%20by%2045%20Degrees.jpg)
 
 Rotated by -90 Degrees
 
-![image](output/Rotated by -90 Degrees.jpg)
+![image](output/Rotated%20by%20-90%20Degrees.jpg)
 
 Rotated by 180 Degrees
 
-![image](output/Rotated by 180 Degrees.jpg)
+![image](output/Rotated%20by%20180%20Degrees.jpg)
 
 ## Reseizing
 Resized by Width
 
-![image](output/Resized by Width.jpg)
+![image](output/Resized%20by%20Width.jpg)
 
 Resized by Height
 
-![image](output/Resized by Height.jpg)
+![image](output/Resized%20by%20Height.jpg)
 
 Resized via Function
 
-![image](output/Resized via Function.jpg)
+![image](output/Resized%20via%20Function.jpg)
 
 
 ## Flipping
@@ -63,15 +63,15 @@ Flipping an image can be done with the function `cv2.flip(img, dir)`.
 
 Flipped Horizontally
 
-![image](output/Flipped Horizontally.jpg)
+![image](output/Flipped%20Horizontally.jpg)
 
 Flipped Vertically
 
-![image](output/Flipped Vertically.jpg)
+![image](output/Flipped%20Vertically.jpg)
 
 Flipped Horizontally & Vertically
 
-![image](output/Flipped Horizontally & Vertically.jpg)
+![image](output/Flipped Horizontally%20%26%20Vertically.jpg)
 
 
 ## Cropping
@@ -83,5 +83,5 @@ cropped = image[30:120, 240:335]
 
 T-Rex Face
 
-![image](output/T-Rex Face.jpg)
+![image](output/T-Rex%20Face.jpg)
 
