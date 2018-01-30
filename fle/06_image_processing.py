@@ -17,12 +17,12 @@ def show(title, image):
     title = "06_" + title
     imagepath = "output/"+title+".jpg"
     cv2.imwrite(imagepath, image)
-    md("\n[" + title + "](../" + imagepath + ")\n")
+    md("\n![" + title + "](../" + imagepath + ")\n")
     
 def gen_md_for(title, func, func_to_exec, img):
     md("# " + title)
     md(func.__doc__ + "\n")
-    md("\'" + func_to_exec + "\'")
+    md("`" + func_to_exec + "`")
     exec("img2 = " + func_to_exec)
     exec("show(title, img2)")
     md("")
@@ -75,7 +75,6 @@ def flip(image, dir):
 def crop(image, x1, y1, x2, y2):
     """Crop the given image, from the start point to the end point."""
     cropped = image[y1:y2 , x1:x2]
-    print(cropped)
     return cropped
     
 
