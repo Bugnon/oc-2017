@@ -49,7 +49,7 @@ plt.show()
 md("# Gray Histogram")
 
 md("Here's the histogram of the image in gray :")
-md("[Histogram](../output/histogram.jpg)")
+md("![Histogram](../output/histogram.jpg)")
 
 
 chans = cv2.split(image)
@@ -72,7 +72,7 @@ plt.show()
 md("# Color Histogram")
 
 md("Here's the histogram of the image in color :")
-md("[Color Histogram](../output/histogram2.jpg)")
+md("![Color Histogram](../output/histogram2.jpg)")
 
 fig = plt.figure()
 
@@ -108,7 +108,7 @@ plt.show()
 md("# 2D Color Histogram")
 
 md("This histogram shows the combination of colors in the picture.")
-md("[2D Color Histogram](../output/histogram2D.jpg)")
+md("![2D Color Histogram](../output/histogram2D.jpg)")
 
 eq = cv2.equalizeHist(gray)
 
@@ -146,5 +146,5 @@ show("Mask", mask)
 
 plot_histogram(image, "Histogram for Masked Image", mask = mask)
 
-md("[Histogram_with_mask](../output/mask_histogram.jpg)")
+md("![Histogram_with_mask](../output/mask_histogram.jpg)")
 f.close()
