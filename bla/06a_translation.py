@@ -2,7 +2,7 @@ import numpy as np
 import imutils
 import cv2
 
-f = open('md/06_image_processing.md', 'w')
+f = open('06_image_processing.md', 'w')
 
 def md(txt):
     f.write(txt+'\n')
@@ -14,9 +14,9 @@ def show(title, img):
     img_path = "output/"+title+".jpg"
     cv2.imwrite(img_path, img)
     f.write(""+title+"\n\n")
-    f.write("![image](../"+img_path+")\n\n")
+    f.write("![image]("+img_path+")\n\n")
 
-path = "../images/lego_bricks_01.jpg"
+path = "../images/trex.png"
 image = cv2.imread(path)
 
 show('Original', image)
@@ -109,6 +109,8 @@ the NumPy array slicing.
 cropped = image[30:120, 240:335]
 ```
 """)
+
+cv2.rect(
 
 cropped = image[30:120, 240:335]
 show("T-Rex Face", cropped)
