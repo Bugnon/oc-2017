@@ -14,7 +14,7 @@ def md(txt):
 def show(title, image):
     """Show and save the image, and create the .md line for it."""
     cv2.imshow(title, image)
-    title = "06_" + title
+    title = "07_" + title
     imagepath = "output/"+title+".jpg"
     cv2.imwrite(imagepath, image)
     md("\n![" + title + "](../" + imagepath + ")\n")
