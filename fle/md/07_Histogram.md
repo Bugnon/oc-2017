@@ -1,7 +1,7 @@
 # Histograms
 The chapter 7 is about the histograms, here are some exemples of what we can do with the following image :
 
-![06_Original](../output/06_Original.jpg)
+![07_Original](../output/07_Original.jpg)
 
 # Gray Histogram
 Here's the histogram of the image in gray :
@@ -15,11 +15,11 @@ This histogram shows the combination of colors in the picture.
 # Equalizer
 Equalizing an image is finding the perfect contrast to use the most pixels.
 
-![06_Equalized](../output/06_Equalized.jpg)
+![07_Equalized](../output/07_Equalized.jpg)
 
 # Histogram with mask
 We can use a mask for the histogram, with the following mask, here's the histogram we get :
 
-![06_Mask](../output/06_Mask.jpg)
+![07_Mask](../output/07_Mask.jpg)
 
 ![Histogram_with_mask](../output/mask_histogram.jpg)
