@@ -16,7 +16,7 @@ def show(title, img):
     f.write(""+title+"\n\n")
     f.write("![image]("+img_path+")\n\n")
 
-path = "../images/trex.png"
+path = "images/lego336*336.jpg"
 image = cv2.imread(path)
 
 show('Original', image)
@@ -110,9 +110,7 @@ cropped = image[30:120, 240:335]
 ```
 """)
 
-cv2.rect(
-
-cropped = image[30:120, 240:335]
-show("T-Rex Face", cropped)
+cropped = image[40:220, 100:300]
+show("orange lego", cropped)
 cv2.waitKey(0)
 f.close()

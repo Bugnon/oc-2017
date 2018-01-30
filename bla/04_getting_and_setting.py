@@ -13,7 +13,7 @@ cv2.imshow("Original", image)
 print("Pixel at (200, 200) - Red={}, Green={}, Blue={}".format(r, g, b))
 
 ## Change the pixel in the top left corner
-image[200, 200] = (0, 0, 255)
+image[200, 200] = (120, 200, 255)
 (b, g, r) = image[200, 200]
 print("Pixel at (200, 200) - Red={}, Green={}, Blue={}".format(r, g, b))
 cv2.imshow("Original", image)
@@ -23,7 +23,7 @@ corner = image[0:100, 0:100]
 cv2.imshow("Corner", corner)
 
 ## Change a subregion and display it
-image[0:100, 0:100] = (0, 255, 0)
+image[0:100, 0:100] = (200, 255, 0)
 cv2.imshow("Updated", image)
 
 ## Wait for a key press

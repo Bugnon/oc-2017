@@ -1,3 +1,8 @@
+#28.01.18
+#Bugnon 3MOCINFO
+#Author Albert Guedj
+#Inspired from Raphael Holzer's 06a_translation.py
+
 import numpy as np
 import imutils
 import cv2
@@ -16,7 +21,7 @@ def show(title, img):
     f.write(""+title+"\n\n")
     f.write("![image]("+img_path+")\n\n")
 
-path = "../images/trex.png"
+path = "images/lego336*336.jpg"
 image = cv2.imread(path)
 
 show('Original', image)
@@ -27,21 +32,21 @@ md("""
 A translation 2x3 floating point matrix `M` is used with the function
 `cv2.warpAffine(img, M, (w, h))`.
 ```python
-M = np.float32([[1, 0, 25], [0, 1, 50]])
+M = np.float32([[1, 0, 50], [0, 1, 50]])
 shifted = cv2.warpAffine(image, M, (image.shape[1], image.shape[0]))
 ```
 """)
 
-M = np.float32([[1, 0, 25], [0, 1, 50]])
+M = np.float32([[1, 0, 50], [0, 1, 50]])
 shifted = cv2.warpAffine(image, M, (image.shape[1], image.shape[0]))
-show("Shifted Down and Right", shifted)
+show("Shifted_Down_and_Right", shifted)
 
-M = np.float32([[1, 0, -50], [0, 1, -90]])
+M = np.float32([[1, 0, -50], [0, 1, -50]])
 shifted = cv2.warpAffine(image, M, (image.shape[1], image.shape[0]))
-show("Shifted Up and Left", shifted)
+show("Shifted_Up_and_Left", shifted)
 
-shifted = imutils.translate(image, 0, 100)
-show("Shifted Down", shifted)
+shifted = imutils.translate(image, 0, 130)
+show("Shifted_Down", shifted)
 cv2.waitKey(0)
 
 ## ============================================================
@@ -52,38 +57,37 @@ md("""
 ## Rotation
 To rotate an image we need a 2x3 rotation matrix.
 ```python
-M = cv2.getRotationMatrix2D(center, 45, 1.0)
+M = cv2.getRotationMatrix2D(center, 70, 1.0)
 rotated = cv2.warpAffine(image, M, (w, h))
 ```
 """)
 
-M = cv2.getRotationMatrix2D(center, 45, 1.0)
+M = cv2.getRotationMatrix2D(center, 70, 1.0)
 rotated = cv2.warpAffine(image, M, (w, h))
-show("Rotated by 45 Degrees", rotated)
+show("Rotated_by_70_Degrees", rotated)
 
 M = cv2.getRotationMatrix2D(center, -90, 1.0)
 rotated = cv2.warpAffine(image, M, (w, h))
-show("Rotated by -90 Degrees", rotated)
+show("Rotated_by_-90_Degrees", rotated)
 
 rotated = imutils.rotate(image, 180)
-show("Rotated by 180 Degrees", rotated)
+show("Rotated_by_180_Degrees", rotated)
 
 
 ## ============================================================
 md("## Reseizing")
 r = 150.0 / image.shape[1]
 dim = (150, int(image.shape[0]*r))
-
 resized = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
-show("Resized by Width", resized)
+show("Resized_by_Width", resized)
 
 r = 50.0 / image.shape[0]             # height
 dim = (int(image.shape[1] * r), 50)   # (width, hight)
 resized = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
-show("Resized by Height", resized)
+show("Resized_by_Height", resized)
 
 resized = imutils.resize(image, width = 100)
-show("Resized via Function", resized)
+show("Resized_via_Function", resized)
 
 
 md("""
@@ -92,13 +96,13 @@ Flipping an image can be done with the function `cv2.flip(img, dir)`.
 """)
 
 flipped = cv2.flip(image, 1)
-show("Flipped Horizontally", flipped)
+show("Flipped_Horizontally", flipped)
 
 flipped = cv2.flip(image, 0)
-show("Flipped Vertically", flipped)
+show("Flipped_Vertically", flipped)
 
 flipped = cv2.flip(image, -1)
-show("Flipped Horizontally & Vertically", flipped)
+show("Flipped_Horizontally_&_Vertically", flipped)
 
 ## ============================================================
 md("""
@@ -106,13 +110,10 @@ md("""
 Extracting an image region (cropping) can be achieved by using
 the NumPy array slicing.
 ```
-cropped = image[30:120, 240:335]
-```
+cropped = image[40:220, 100:300]```
 """)
 
-cv2.rect(
-
-cropped = image[30:120, 240:335]
-show("T-Rex Face", cropped)
+cropped = image[40:220, 100:300]
+show("orange_lego", cropped)
 cv2.waitKey(0)
 f.close()
