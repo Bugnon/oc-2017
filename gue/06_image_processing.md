@@ -77,8 +77,8 @@ Flipped_Horizontally_&_Vertically
 ## Cropping
 Extracting an image region (cropping) can be achieved by using
 the NumPy array slicing.
-```
-cropped = image[40:220, 100:300]```
+
+```cropped = image[40:220, 100:300]```
 
 orange_lego
 
