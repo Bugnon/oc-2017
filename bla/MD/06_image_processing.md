@@ -1,7 +1,7 @@
-# Image processing
-Original
+# 6: Image processing
+06_Original
 
-![image](/..output/Original.jpg)
+![image](../output/06_Original.jpg)
 
 
 ## Translation
@@ -12,17 +12,17 @@ M = np.float32([[1, 0, 25], [0, 1, 50]])
 shifted = cv2.warpAffine(image, M, (image.shape[1], image.shape[0]))
 ```
 
-Shifted Down and Right
+06_Shifted Down and Right
 
-![image](/..output/Shifted Down and Right.jpg)
+![image](../output/06_Shifted Down and Right.jpg)
 
-Shifted Up and Left
+06_Shifted Up and Left
 
-![image](/..output/Shifted Up and Left.jpg)
+![image](../output/06_Shifted Up and Left.jpg)
 
-Shifted Down
+06_Shifted Down
 
-![image](/..output/Shifted Down.jpg)
+![image](../output/06_Shifted Down.jpg)
 
 
 ## Rotation
@@ -32,46 +32,46 @@ M = cv2.getRotationMatrix2D(center, 45, 1.0)
 rotated = cv2.warpAffine(image, M, (w, h))
 ```
 
-Rotated by 45 Degrees
+06_Rotated by 45 Degrees
 
-![image](/..output/Rotated by 45 Degrees.jpg)
+![image](../output/06_Rotated by 45 Degrees.jpg)
 
-Rotated by -90 Degrees
+06_Rotated by -90 Degrees
 
-![image](/..output/Rotated by -90 Degrees.jpg)
+![image](../output/06_Rotated by -90 Degrees.jpg)
 
-Rotated by 180 Degrees
+06_Rotated by 180 Degrees
 
-![image](/..output/Rotated by 180 Degrees.jpg)
+![image](../output/06_Rotated by 180 Degrees.jpg)
 
 ## Reseizing
-Resized by Width
+06_Resized by Width
 
-![image](/..output/Resized by Width.jpg)
+![image](../output/06_Resized by Width.jpg)
 
-Resized by Height
+06_Resized by Height
 
-![image](/..output/Resized by Height.jpg)
+![image](../output/06_Resized by Height.jpg)
 
-Resized via Function
+06_Resized via Function
 
-![image](/..output/Resized via Function.jpg)
+![image](../output/06_Resized via Function.jpg)
 
 
 ## Flipping
 Flipping an image can be done with the function `cv2.flip(img, dir)`.
 
-Flipped Horizontally
+06_Flipped Horizontally
 
-![image](/..output/Flipped Horizontally.jpg)
+![image](../output/06_Flipped Horizontally.jpg)
 
-Flipped Vertically
+06_Flipped Vertically
 
-![image](/..output/Flipped Vertically.jpg)
+![image](../output/06_Flipped Vertically.jpg)
 
-Flipped Horizontally & Vertically
+06_Flipped Horizontally & Vertically
 
-![image](/..output/Flipped Horizontally & Vertically.jpg)
+![image](../output/06_Flipped Horizontally & Vertically.jpg)
 
 
 ## Cropping
@@ -81,7 +81,80 @@ the NumPy array slicing.
 cropped = image[30:120, 240:335]
 ```
 
-T-Rex Face
+06_face_of_the_man
 
-![image](/..output/T-Rex Face.jpg)
+![image](../output/06_face_of_the_man.jpg)
+
+
+## Arithmetic
+Testing basic arithmetic functions
+
+06_2_Rectangle
+
+![image](../output/06_2_Rectangle.jpg)
+
+06_2_Circle
+
+![image](../output/06_2_Circle.jpg)
+
+06_2_AND
+
+![image](../output/06_2_AND.jpg)
+
+06_2_OR
+
+![image](../output/06_2_OR.jpg)
+
+06_2_XOR
+
+![image](../output/06_2_XOR.jpg)
+
+06_2_NOT_rectangle
+
+![image](../output/06_2_NOT_rectangle.jpg)
+
+06_2_NOT_circle
+
+![image](../output/06_2_NOT_circle.jpg)
+
+
+## Masking
+Using a mask to take only the most important part of the picture.
+
+06_2_Square Mask applied to image
+
+![image](../output/06_2_Square Mask applied to image.jpg)
+
+06_2_Circular Mask applied to image
+
+![image](../output/06_2_Circular Mask applied to image.jpg)
+
+
+## Splitting And Merging Channels
+
+__Splitting the channels__
+
+06_3_Red
+
+![image](../output/06_3_Red.jpg)
+
+06_3_Green
+
+![image](../output/06_3_Green.jpg)
+
+06_3_Blue
+
+![image](../output/06_3_Blue.jpg)
+
+06_3_red
+
+![image](../output/06_3_red.jpg)
+
+06_3_green
+
+![image](../output/06_3_green.jpg)
+
+06_3_blue
+
+![image](../output/06_3_blue.jpg)
 
