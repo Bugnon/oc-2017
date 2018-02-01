@@ -73,4 +73,5 @@ show("Bilateral", np.hstack([
 	blur_bi(image, 5, 30),
 	blur_bi(image, 7, 50)]))
 	
+f.close()
 cv2.waitKey(0)
