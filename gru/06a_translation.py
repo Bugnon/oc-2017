@@ -16,7 +16,7 @@ def show(title, img):
     f.write(""+title+"\n\n")
     f.write("![image]("+img_path+")\n\n")
 
-path = "images/lego.jpg"
+path = "../images/trex.png"
 image = cv2.imread(path)
 
 show('Original', image)

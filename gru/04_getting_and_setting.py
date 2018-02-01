@@ -9,14 +9,16 @@ image = cv2.imread(path)
 cv2.imshow("Original", image)
 
 ## Read the pixel in the top left corner
-(b, g, r) = image[0, 0]
-print("Pixel at (0, 0) - Red={}, Green={}, Blue={}".format(r, g, b))
+(b, g, r) = image[200, 200]
+print("Pixel at (200, 200) - Red={}, Green={}, Blue={}".format(r, g, b))
 
 ## Change the pixel in the top left corner
-image[0, 0] = (0, 0, 255)
-(b, g, r) = image[0, 0]
-print("Pixel at (0, 0) - Red={}, Green={}, Blue={}".format(r, g, b))
-cv2.imshow("original2", image)
+image[5, 5] = (0, 0, 255)
+(b, g, r) = image[200, 200]
+print("Pixel at (200, 200) - Red={}, Green={}, Blue={}".format(r, g, b))
+cv2.imshow("Original", image)
+image
+cv2.imshow("changed", image)
 
 ## Extract a sub-image and display it
 corner = image[0:100, 0:100]
@@ -24,8 +26,6 @@ cv2.imshow("Corner", corner)
 
 ## Change a subregion and display it
 image[0:100, 0:100] = (0, 255, 0)
-image[100:200, 100:200] = (0, 0, 255)
-image[0:100, 200:300] = (128, 255, 0)
 cv2.imshow("Updated", image)
 
 ## Wait for a key press

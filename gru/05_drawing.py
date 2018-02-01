@@ -24,7 +24,13 @@ update()
 cv2.line(canvas, (300, 0), (0, 300), red, 3)
 update()
 
+cv2.line(canvas, (0, 150), (300, 150), blue, 3)
+update()
+
 cv2.rectangle(canvas, (10, 10), (60, 60), green)
+update()
+
+cv2.rectangle(canvas, (0, 0), (70, 70), blue, 2)
 update()
 
 cv2.rectangle(canvas, (50, 200), (200, 225), red, 5)
