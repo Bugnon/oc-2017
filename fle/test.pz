@@ -1,0 +1,19 @@
+from cv2 import *
+import numpy as np
+
+size=400
+image = np.zeros((size, size), dtype = "uint8")
+
+
+##image = circle(image, (200, 200), 200, [255, 5])
+l = 12
+for i in range(int((size)/(l))):
+    offset = i*l*2-size
+    for x in range(size):
+        for y in range(size):
+            if (y)^2 + (x)^2 < l:
+                if(x+offset >= 0 and x+offset < size):
+                    image[x+offset, y] = 255
+
+imshow("empty", image)
+waitKey(0)
