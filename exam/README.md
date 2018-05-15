@@ -1,4 +1,4 @@
-Sujets d'examen
+# Sujets d'examen
 * Gabriel Fu - Linux: historique, structre des fichiers, commandes
 * Jonas - Python introduction: historique, script/console, variables, expressions, flux
 * Samuel - Python données: listes, tuples, dictionnaries, ensembles
